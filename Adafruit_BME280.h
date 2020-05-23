@@ -183,6 +183,7 @@ class Adafruit_BME280 {
         
         float readAltitude(float seaLevel);
         float seaLevelForAltitude(float altitude, float pressure);
+        void      write8(byte reg, byte value);
 
         
     private:
@@ -190,7 +191,6 @@ class Adafruit_BME280 {
         bool isReadingCalibration(void);
         uint8_t spixfer(uint8_t x);
 
-        void      write8(byte reg, byte value);
         uint8_t   read8(byte reg);
         uint16_t  read16(byte reg);
         uint32_t  read24(byte reg);
